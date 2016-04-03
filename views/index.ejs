@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="javascripts\libs\angular.js"></script>
+    <script src="javascripts\libs\angular-route.min.js"></script>
+    <script src="javascripts\angularApp.js"></script>
+    <script src="javascripts\controllers\mainController.js"></script>
+  </head>
+  <body ng-app="ngoApp" ng-controller="MainController">
+    <div>
+      Home {{test}}
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
