@@ -5,7 +5,7 @@ app.config(function($routeProvider) {
 
         // route for the home page
         .when('/home', {
-            templateUrl : 'templates/home-page.html',
+            templateUrl : 'templates/dashboard.html',
             controller  : 'MainController'
         })
         .otherwise({

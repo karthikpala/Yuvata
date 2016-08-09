@@ -2,14 +2,18 @@
 <html>
   <head>
     <title><%= title %></title>
-    <script src="javascripts\libs\angular.js"></script>
-    <script src="javascripts\libs\angular-route.min.js"></script>
-    <script src="javascripts\angularApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components\font-awesome\css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets\dashboard.css">
+    
+    <script src="bower_components\angular\angular.min.js"></script>
+    <script src="bower_components\angular-route\angular-route.min.js"></script>
+    <script src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="angularApp.js"></script>
     <script src="javascripts\controllers\mainController.js"></script>
   </head>
   <body ng-app="ngoApp" ng-controller="MainController">
     <div>
-      Home {{test}}
       <div ng-view></div>
     </div>
   </body>
