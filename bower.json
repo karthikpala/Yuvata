@@ -19,6 +19,8 @@
     "angular": "^1.5.3",
     "bootstrap": "^3.3.6",
     "angular-route": "^1.5.3",
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "gm.datepickerMultiSelect": "gm.datepicker-multi-select#^1.0.10",
+    "angular-bootstrap": "^2.2.0"
   }
 }

@@ -1,4 +1,4 @@
-var app = angular.module('ngoApp', ['ngRoute']);
+var app = angular.module('ngoApp', ['ngRoute','gm.datepickerMultiSelect','ui.bootstrap']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -7,6 +7,10 @@ app.config(function($routeProvider) {
         .when('/home', {
             templateUrl : 'templates/dashboard.html',
             controller  : 'MainController'
+        })
+        .when('/plan-event', {
+            templateUrl : 'templates/date-planner.html',
+            controller  : 'DatePlanController'
         })
         .otherwise({
             redirectTo: '/home'

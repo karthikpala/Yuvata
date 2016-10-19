@@ -1,0 +1,59 @@
+<div class="container">
+	<div class='panel'>
+		<h3>Selection Type:</h3>
+		<div class='btn-group'>
+			<button class='btn btn-primary' ng-model='type'
+				uib-btn-radio='"individual"'>Individual</button>
+			<button class='btn btn-primary' ng-model='type'
+				uib-btn-radio='"range"'>Range</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div uib-datepicker ng-model='activeDate'
+				multi-select='selectedDates' select-range='{{type=="range"}}'
+				datepicker-options='options'></div>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6">
+					<span> Start Time :</span>
+					<div uib-timepicker ng-model="mytime" ng-change="timeChanged()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+				</div>
+				<div class="col-md-6">
+					<span> End Time :</span>
+					<div uib-timepicker ng-model="mytime" ng-change="timeChanged()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <table>
+		<tr>
+			<td>
+				
+			</td>
+			<td style='width: 50px'></td>
+			<td>
+				<div ng-if='type=="individual"'>
+					Selected Dates:
+					<div class='well well-sm'>
+						<div ng-repeat='d in selectedDates | orderBy'>
+							{{d | date : 'fullDate'}}
+							<button class='btn btn-xs btn-warning' style='margin: 5px'
+								ng-click='removeFromSelected(d)'>Remove</button>
+						</div>
+					</div>
+				</div>
+				<div ng-if='type=="range"'>
+					Selected Range:
+					<div class='well well-sm'>
+						{{(selectedDates | orderBy)[0] | date:"fullDate"}} <span
+							ng-if='selectedDates.length > 1'> - {{(selectedDates |
+							orderBy : '-')[0] | date:"fullDate"}} </span>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table> -->
+
+</div>
